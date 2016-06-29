@@ -1,6 +1,0 @@
-C:\Users\vpham\Documents\Projects\HackerRankSolutions\HackerRankSolutions\bin\Debug\HackerRankSolutions.exe.config
-C:\Users\vpham\Documents\Projects\HackerRankSolutions\HackerRankSolutions\bin\Debug\HackerRankSolutions.exe
-C:\Users\vpham\Documents\Projects\HackerRankSolutions\HackerRankSolutions\bin\Debug\HackerRankSolutions.pdb
-C:\Users\vpham\Documents\Projects\HackerRankSolutions\HackerRankSolutions\obj\Debug\HackerRankSolutions.csprojResolveAssemblyReference.cache
-C:\Users\vpham\Documents\Projects\HackerRankSolutions\HackerRankSolutions\obj\Debug\HackerRankSolutions.exe
-C:\Users\vpham\Documents\Projects\HackerRankSolutions\HackerRankSolutions\obj\Debug\HackerRankSolutions.pdb
