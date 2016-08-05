@@ -9,32 +9,80 @@ namespace HackerRankSolutions
 {
     class Program
     {
+        #region Algorithms
+
+        #region Circular Array Rotation
+
+        //static void Main(String[] args)
+        //{
+        //    string[] vars = Console.ReadLine().Split(' ');
+
+        //    int numInputs = Convert.ToInt32(vars[0]);
+        //    int numRotations = Convert.ToInt32(vars[1]);
+        //    int numQueries = Convert.ToInt32(vars[2]);
+
+        //    string[] arr = Console.ReadLine().Split(' ');
+
+        //    string[] rotatedArr = new string[arr.Length];
+
+        //    for (int j = 0; j < arr.Length; j++)
+        //    {
+        //        int iPos = j + numRotations >= arr.Length ? (j + numRotations) - arr.Length : j + numRotations;
+        //        rotatedArr[iPos] = arr[j];
+        //    }
+
+
+        //    StringBuilder sbOutput = new StringBuilder();
+        //    for (int k = 0; k < numQueries; k++)
+        //    {
+        //        sbOutput.Append(rotatedArr[Convert.ToInt32(Console.ReadLine())]).Append(Environment.NewLine);
+        //    }
+
+        //    Console.WriteLine(sbOutput.ToString());
+
+        //    Console.ReadKey();
+        //}
+
+        #endregion
+
+        #region
         static void Main(String[] args)
         {
-            string input = Console.ReadLine();
-
-            List<string> lstPalindromes = new List<string>();
-
-            Console.WriteLine(isPalindrome(input));
+            string[] vars = Console.ReadLine().Split(' ');
 
             Console.ReadKey();
         }
+        #endregion
 
-        static bool isPalindrome(string input)
-        {
-            for(int i = 0; i < input.Length / 2; i++)
-            {
-                if(input[i] != input[input.Length - i - 1])
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
+        #endregion
 
         #region 30 Day Challenge
+
+        #region Palindromes
+
+        //static void Main(String[] args)
+        //{
+        //    string input = Console.ReadLine();
+        //
+        //    Console.WriteLine(isPalindrome(input));
+        //
+        //    Console.ReadKey();
+        //}
+
+        //static bool isPalindrome(string input)
+        //{
+        //    for (int i = 0; i < input.Length / 2; i++)
+        //    {
+        //        if (input[i] != input[input.Length - i - 1])
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //
+        //    return true;
+        //}
+
+        #endregion
 
         #region Day 18 Queues and Stacks
         //public List<char> stack = new List<char>();
@@ -633,7 +681,7 @@ namespace HackerRankSolutions
         //    Console.ReadKey();
         //}
 
-        #endregion  
+        #endregion
 
         #endregion
     }

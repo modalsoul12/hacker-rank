@@ -49,3 +49,13 @@ Temporary Items
 .HackerRankSolutions/bin
 .HackerRankSolutions/obj
 *.suo
+HackerRankSolutions/bin/Debug/HackerRankSolutions.exe
+HackerRankSolutions/bin/Debug/HackerRankSolutions.exe.config
+*.pdb
+HackerRankSolutions/bin/Debug/HackerRankSolutions.vshost.exe
+*.config
+HackerRankSolutions/obj/Debug/HackerRankSolutions.csproj.FileListAbsolute.txt
+*.manifest
+HackerRankSolutions/obj/Debug/HackerRankSolutions.exe
+*.cs
+HackerRankSolutions/obj/Debug/HackerRankSolutions.csprojResolveAssemblyReference.cache
