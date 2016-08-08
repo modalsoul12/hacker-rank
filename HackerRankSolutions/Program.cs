@@ -25,6 +25,11 @@ namespace HackerRankSolutions
 
         //    string[] rotatedArr = new string[arr.Length];
 
+        //    if(numRotations > numInputs)
+        //    {
+        //        numRotations = numRotations % numInputs;    
+        //    }
+
         //    for (int j = 0; j < arr.Length; j++)
         //    {
         //        int iPos = j + numRotations >= arr.Length ? (j + numRotations) - arr.Length : j + numRotations;
@@ -45,10 +50,41 @@ namespace HackerRankSolutions
 
         #endregion
 
-        #region
+        #region Chocolate in Box
+        //Two players take turns taking chocolates from a box.
+        //One who is not able to take any chocolates loses the game.
+        //Find optimal first turn as player one to win.
+        //Print 0 if not possible.
         static void Main(String[] args)
         {
+            int iContainers = Convert.ToInt32(Console.ReadLine());
             string[] vars = Console.ReadLine().Split(' ');
+
+            int[] numChocolates = new int[vars.Length];
+
+            int iSumChocolates = 0;
+
+            for(int i = 0; i < vars.Length; i++)
+            {
+                numChocolates[i] = Convert.ToInt32(vars[i]);
+                iSumChocolates += numChocolates[i];
+            }
+
+            //Test Case 1
+            //2
+            //2 3
+            //Answer: 1
+
+            //Test Case 2
+            //5
+            //251149 86127 711523 501067 617190
+            //Answer: 1
+
+            //Test Case 3
+            //10
+            //189244 233165 896197 173284 638689 15877 272091 737304 325404 443303
+            //Answer: 3
+
 
             Console.ReadKey();
         }
