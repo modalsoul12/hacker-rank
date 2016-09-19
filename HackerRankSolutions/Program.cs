@@ -55,39 +55,75 @@ namespace HackerRankSolutions
         //One who is not able to take any chocolates loses the game.
         //Find optimal first turn as player one to win.
         //Print 0 if not possible.
+        //static void Main(String[] args)
+        //{
+        //    int iContainers = Convert.ToInt32(Console.ReadLine());
+        //    string[] vars = Console.ReadLine().Split(' ');
+
+        //    int[] numChocolates = new int[vars.Length];
+
+        //    int iSumChocolates = 0;
+
+        //    for(int i = 0; i < vars.Length; i++)
+        //    {
+        //        numChocolates[i] = Convert.ToInt32(vars[i]);
+        //        iSumChocolates += numChocolates[i];
+        //    }
+
+        //    Console.ReadKey();
+        //}
+        #endregion
+
+        #region Kangaroo
+        //Given two lines with x-intercept and slope, determine if the two lines intersect.
+        //static void Main(String[] args)
+        //{
+        //    string[] tokens_x1 = Console.ReadLine().Split(' ');
+        //    int x1 = Convert.ToInt32(tokens_x1[0]);
+        //    int v1 = Convert.ToInt32(tokens_x1[1]);
+        //    int x2 = Convert.ToInt32(tokens_x1[2]);
+        //    int v2 = Convert.ToInt32(tokens_x1[3]);
+
+        //    if (v2 >= v1 || (x2 - x1) % (v2 - v1) > 0)
+        //    {
+        //        Console.WriteLine("NO");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("YES");
+        //    }
+
+        //}
+
+        #endregion
+
+        #region Divisible Sum Pairs
+        //Given an array of integers and a positive integer (k), 
+        //find and print number of pairs that are divisible by k.
         static void Main(String[] args)
         {
-            int iContainers = Convert.ToInt32(Console.ReadLine());
-            string[] vars = Console.ReadLine().Split(' ');
+            string[] tokens_n = Console.ReadLine().Split(' ');
+            int n = Convert.ToInt32(tokens_n[0]);
+            int k = Convert.ToInt32(tokens_n[1]);
+            string[] a_temp = Console.ReadLine().Split(' ');
+            int[] a = Array.ConvertAll(a_temp, Int32.Parse);
 
-            int[] numChocolates = new int[vars.Length];
+            int iCount = 0;
 
-            int iSumChocolates = 0;
-
-            for(int i = 0; i < vars.Length; i++)
+            for (int i = 0; i < a.Length - 1; i++)
             {
-                numChocolates[i] = Convert.ToInt32(vars[i]);
-                iSumChocolates += numChocolates[i];
+                for(int j = i + 1; j < a.Length; j++)
+                {
+                    if((a[i] + a[j]) % k == 0)
+                    {
+                        iCount++;
+                    }
+                }
             }
 
-            //Test Case 1
-            //2
-            //2 3
-            //Answer: 1
-
-            //Test Case 2
-            //5
-            //251149 86127 711523 501067 617190
-            //Answer: 1
-
-            //Test Case 3
-            //10
-            //189244 233165 896197 173284 638689 15877 272091 737304 325404 443303
-            //Answer: 3
-
-
-            Console.ReadKey();
+            Console.WriteLine(iCount);
         }
+
         #endregion
 
         #endregion
