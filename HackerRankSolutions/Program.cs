@@ -100,6 +100,63 @@ namespace HackerRankSolutions
         #region Divisible Sum Pairs
         //Given an array of integers and a positive integer (k), 
         //find and print number of pairs that are divisible by k.
+        //static void Main(String[] args)
+        //{
+        //    string[] tokens_n = Console.ReadLine().Split(' ');
+        //    int n = Convert.ToInt32(tokens_n[0]);
+        //    int k = Convert.ToInt32(tokens_n[1]);
+        //    string[] a_temp = Console.ReadLine().Split(' ');
+        //    int[] a = Array.ConvertAll(a_temp, Int32.Parse);
+
+        //    int iCount = 0;
+
+        //    for (int i = 0; i < a.Length - 1; i++)
+        //    {
+        //        for(int j = i + 1; j < a.Length; j++)
+        //        {
+        //            if((a[i] + a[j]) % k == 0)
+        //            {
+        //                iCount++;
+        //            }
+        //        }
+        //    }
+
+        //    Console.WriteLine(iCount);
+        //}
+
+        #endregion
+
+        #region Cut The Sticks
+        //Given n sticks, perform a cut operation on the sticks such that
+        //all are reduced by the length of the smallest stick.
+        //Repeat until no sticks are left.
+
+        //static void Main(String[] args)
+        //{
+        //    int n = Convert.ToInt32(Console.ReadLine());
+        //    string[] arr_temp = Console.ReadLine().Split(' ');
+        //    int[] arr = Array.ConvertAll(arr_temp, Int32.Parse);
+
+        //    List<int> sticks = arr.ToList();
+
+        //    while(sticks.Count > 0)
+        //    {
+        //        Console.WriteLine(sticks.Count);
+
+        //        int iShortestStick = sticks.Min();
+
+        //        for(int i = 0; i < sticks.Count; i++)
+        //        {
+        //            sticks[i] -= iShortestStick;
+        //        }
+
+        //        sticks.RemoveAll(x => x <= 0);
+        //    }
+
+        //}
+        #endregion
+
+        #region Non-Divisible Subset
         static void Main(String[] args)
         {
             string[] tokens_n = Console.ReadLine().Split(' ');
@@ -108,20 +165,18 @@ namespace HackerRankSolutions
             string[] a_temp = Console.ReadLine().Split(' ');
             int[] a = Array.ConvertAll(a_temp, Int32.Parse);
 
-            int iCount = 0;
 
             for (int i = 0; i < a.Length - 1; i++)
             {
-                for(int j = i + 1; j < a.Length; j++)
+                for (int j = i + 1; j < a.Length; j++)
                 {
-                    if((a[i] + a[j]) % k == 0)
+                    if ((a[i] + a[j]) % k == 0)
                     {
-                        iCount++;
+                        //Add to a list?
                     }
                 }
+ 
             }
-
-            Console.WriteLine(iCount);
         }
 
         #endregion
