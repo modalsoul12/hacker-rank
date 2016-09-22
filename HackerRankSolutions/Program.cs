@@ -165,18 +165,40 @@ namespace HackerRankSolutions
             string[] a_temp = Console.ReadLine().Split(' ');
             int[] a = Array.ConvertAll(a_temp, Int32.Parse);
 
+            //Start With Largest Subset
+            int iSubset = a.Length;
 
-            for (int i = 0; i < a.Length - 1; i++)
+            bool bDivisible = false;
+            while (iSubset > 1)
             {
-                for (int j = i + 1; j < a.Length; j++)
+                //Iterate through Subset to check if all pairs are non-divisible.
+                //TODO: Make outer loop for number of subsets to test.
+
+                for (int i = 0; i < iSubset - 1; i++)
                 {
-                    if ((a[i] + a[j]) % k == 0)
+                    for (int j = i + 1; j < iSubset; j++)
                     {
-                        //Add to a list?
+                        if ((a[i] + a[j]) % k == 0)
+                        {
+                            bDivisible = true;
+                        }
                     }
                 }
- 
+
+                if (bDivisible)
+                {
+                    //If it fails, reduce subset and start over
+                    iSubset--;
+                }
+                else
+                {
+                    //If it passes, print subset and return.
+                    break;
+
+                }
             }
+
+            Console.WriteLine(iSubset);
         }
 
         #endregion
