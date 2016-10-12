@@ -157,49 +157,50 @@ namespace HackerRankSolutions
         #endregion
 
         #region Non-Divisible Subset
-        static void Main(String[] args)
-        {
-            string[] tokens_n = Console.ReadLine().Split(' ');
-            int n = Convert.ToInt32(tokens_n[0]);
-            int k = Convert.ToInt32(tokens_n[1]);
-            string[] a_temp = Console.ReadLine().Split(' ');
-            int[] a = Array.ConvertAll(a_temp, Int32.Parse);
+        //TODO: Finish
+        //static void Main(String[] args)
+        //{
+        //    string[] tokens_n = Console.ReadLine().Split(' ');
+        //    int n = Convert.ToInt32(tokens_n[0]);
+        //    int k = Convert.ToInt32(tokens_n[1]);
+        //    string[] a_temp = Console.ReadLine().Split(' ');
+        //    int[] a = Array.ConvertAll(a_temp, Int32.Parse);
 
-            //Start With Largest Subset
-            int iSubset = a.Length;
+        //    //Start With Largest Subset
+        //    int iSubset = a.Length;
 
-            bool bDivisible = false;
-            while (iSubset > 1)
-            {
-                //Iterate through Subset to check if all pairs are non-divisible.
-                //TODO: Make outer loop for number of subsets to test.
+        //    bool bDivisible = false;
+        //    while (iSubset > 1)
+        //    {
+        //        //Iterate through Subset to check if all pairs are non-divisible.
+        //        //TODO: Make outer loop for number of subsets to test.
 
-                for (int i = 0; i < iSubset - 1; i++)
-                {
-                    for (int j = i + 1; j < iSubset; j++)
-                    {
-                        if ((a[i] + a[j]) % k == 0)
-                        {
-                            bDivisible = true;
-                        }
-                    }
-                }
+        //        for (int i = 0; i < iSubset - 1; i++)
+        //        {
+        //            for (int j = i + 1; j < iSubset; j++)
+        //            {
+        //                if ((a[i] + a[j]) % k == 0)
+        //                {
+        //                    bDivisible = true;
+        //                }
+        //            }
+        //        }
 
-                if (bDivisible)
-                {
-                    //If it fails, reduce subset and start over
-                    iSubset--;
-                }
-                else
-                {
-                    //If it passes, print subset and return.
-                    break;
+        //        if (bDivisible)
+        //        {
+        //            //If it fails, reduce subset and start over
+        //            iSubset--;
+        //        }
+        //        else
+        //        {
+        //            //If it passes, print subset and return.
+        //            break;
 
-                }
-            }
+        //        }
+        //    }
 
-            Console.WriteLine(iSubset);
-        }
+        //    Console.WriteLine(iSubset);
+        //}
 
         #endregion
 
@@ -832,6 +833,22 @@ namespace HackerRankSolutions
 
         #endregion
 
+        #endregion
+
+        #region Strings: Making Anagrams
+        //Given two strings, determine how many characters need to be deleted to make the strings anagrams.
+        static void Main(String[] args)
+        {
+            string a = Console.ReadLine();
+            string b = Console.ReadLine();
+            StringBuilder x = new StringBuilder();
+
+            //TODO: Finish
+            
+
+
+            Console.ReadKey();
+        }
         #endregion
     }
 }
